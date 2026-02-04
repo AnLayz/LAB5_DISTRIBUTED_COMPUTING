@@ -69,17 +69,9 @@ hadoop jar /usr/lib/hadoop-mapreduce/hadoop-streaming.jar \
 bash
 Copy code
 hdfs dfs -head /user/hadoop/output/part-00000
-🧪 Experiment: Scaling Scenario
-A scaling experiment was performed to verify that increasing the number of worker nodes reduces execution time due to parallel processing.
 
-Scenario A: 2 Core Nodes vs 4 Core Nodes
-Configuration	Number of Core Nodes	Execution Time	Performance Gain
-Baseline	2 Nodes	55 seconds	–
-Scaled	4 Nodes	45 seconds	~18% faster
 
 Observation
 Scaling the cluster from 2 to 4 core nodes reduced the processing time from 55 seconds to 45 seconds.
 This confirms that the MapReduce framework efficiently utilizes additional resources to parallelize the Map phase, improving overall job performance.
 
-Author: Your Name
-Date: February 2026
